@@ -1,0 +1,131 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+	font-family: verdana;
+}
+.action {
+	padding: 5px;
+	float: left;
+	cursor: pointer;
+	color: #ffffff;
+	margin-left: 2px;
+	margin-right: 2px;
+	border-radius: 0.2em;
+	background-color: #333333;
+}
+#toolbar {
+	width: 1260px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+#search {
+	padding: 8px;
+}
+#btn-reload {
+	padding: 10px;
+	border-radius: 0.2em;
+	background-color: #fcfbfb;
+	border: 1px solid #dddddc;
+}
+#btn-reload:hover {
+	color: #ffffff;
+	cursor: pointer;
+	background-color: #333333;
+}
+#btn-getchecked {
+	padding: 10px;
+	border-radius: 0.2em;
+	background-color: #fcfbfb;
+	border: 1px solid #dddddc;
+}
+#btn-getchecked:hover {
+	color: #ffffff;
+	cursor: pointer;
+	background-color: #333333;
+}
+#btn-setchecked {
+	padding: 10px;
+	border-radius: 0.2em;
+	background-color: #fcfbfb;
+	border: 1px solid #dddddc;
+}
+#btn-setchecked:hover {
+	color: #ffffff;
+	cursor: pointer;
+	background-color: #333333;
+}
+#search-option {
+	padding: 8px;
+	margin-left: 53%;
+}
+table {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+table tr th {
+	padding: 8px;
+	background-color: #fcfbfb;
+	border: 1px solid #dddddc;
+}
+table thead tr th:hover {
+	cursor: pointer;
+	background-color: #eeeeee;
+}
+table tr #no {
+	background-color: #fcfbfb;
+} 
+table tr td {
+	padding: 8px;
+	border: 1px solid #dddddc;
+}
+table thead tr td:hover {
+	cursor: pointer;
+	background-color: #eeeeee;
+}
+#wp-paging {
+	width: 1260px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+}
+#option {
+	width: 50px;
+	height: 35px;
+	float: left;
+	margin-top: 2px;
+	margin-right: 10px;
+}
+#info {
+	width: 200px;
+	float: left;
+	margin-top: 12px;
+}
+#paging {
+	float: right;
+	overflow: hidden;
+}
+#paging li {
+	padding: 10px;
+	float: left;
+	color: #333;
+	list-style: none;
+	margin-left: 5px;
+	border-radius: 0.2em;
+	background-color: #fcfbfb;
+	border: 1px solid #dddddc;
+}
+#paging #active {
+	color: #fff;
+	border: 0px;
+	background-color: #333333;
+}
+#paging li:hover {
+	color: #ffffff;
+	cursor: pointer;
+	background-color: #333333;
+}

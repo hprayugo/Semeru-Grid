@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Semeru Grid</title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<body>
+		<div id="toolbar">
+			<button id="btn-reload">Reload</button>
+			<button id="btn-getchecked">Get Checked</button>
+			<button id="btn-setchecked">Set Checked</button>
+			<select id="search-option"></select>
+			<input id="search" type="text" placeholder="Search...">
+		</div>
+		<table id="datagrid" cellspacing="0" cellpadding="0"></table>
+		<div id="wp-paging">
+			<ul id="paging"></ul>
+			<select id="option"></select>
+			<div id="info"></div>
+		</div>
+		<script src="js/jquery-2.1.1.min.js"></script>
+		<script src="js/datagrid.min.js"></script>
+		<script type="text/javascript">
+
+			var datagrid = $("#datagrid").datagrid({
+				url: "data.php", primaryField: 'ID', rowNumber: true, rowCheck: true, paging: "#paging", 
+				info: "#info", option: "#option", search: "#search", searchOption: "#search-option", 
+				currentPageSize: 5, pageSize: [5,10,20,30],
+		        columns: [
+		        	{field: 'Name', title: 'Name', width: 500, align: 'center', search: true},
+		        	{field: 'CountryCode', title: 'Country Code', width: 150, align: 'center', search: true},
+		        	{field: 'District', title: 'District', width: 120, align: 'left', search: true},
+		        	{field: 'Population', title: 'Population', width: 120, align: 'left', search: true},
+		        	{field: 'menu', title: 'Menu', width: 200, align: 'center', search: false, 
+		        		rowStyler: function(row, index) {
+		        			var temp = '<div class="action" onclick="action(\''+row['District']+'\')">Get Data</div> '+
+									   '<div class="action" onclick="getdata(\''+index+'\')">Get Data By Index</div>';
+		        			return temp;
+		        		}
+		        	}
+		        ]
+			});
+
+			function action(rowData) {
+				alert(rowData);
+			}
+
+			function getdata(index) {
+				var row = datagrid.getData(index);
+				alert(row['CountryCode']);
+			}
+
+			$(document).ready(function() {
+
+				$('#btn-reload').click(function() {
+					datagrid.reload();
+				});
+
+				$('#btn-getchecked').click(function() {
+					alert(datagrid.getChecked());
+				});
+
+				$('#btn-setchecked').click(function() {
+					var arrChecked = ['1', '2', '4'];
+					datagrid.setChecked(arrChecked);
+				});
+			});
+		</script>
+	</body>
+</html>
